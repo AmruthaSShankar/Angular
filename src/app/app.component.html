@@ -1,0 +1,33 @@
+ 
+
+
+<div class="jumbotron">
+  <div class="container">
+    <div *ngFor = "let d of (data | async | groupBy : 'time' | keys)" class="row-md-4">      
+     
+         <h3>{{d.key|date:'fullDate'}}</h3>
+         <div *ngFor="let v of d.value" class="row" style="background-color:#E6E6FA">    
+    <div class="col-sm-2">     
+          <img src={{v.subjectPhotoUrl}} class="img-thumbnail" >        
+     </div>
+     <div class="col-sm-6">    
+        <h3>{{v.title}}</h3>
+        <p>{{v.description}}</p>      
+    </div>
+      <div class="col-sm-2">
+      <img src={{v.instructorPhotoUrl}} class="img-thumbnail" >    
+      <h4>{{v.instructorName}}</h4>    
+      </div>
+      <div class="col-sm-2">
+      {{v.time | date:'h:mm'}} - {{v.endtime | date:'h:mm'}}      
+
+      </div>
+    </div>
+    </div>
+  
+    
+  </div>
+</div>
+
+
+

@@ -1,0 +1,23 @@
+body {
+  background-color: lightslategray;
+}
+
+h3 {
+  color: black;
+  text-align: left;
+  font-family: verdana;
+  font-size: 15px;
+}
+
+h4{
+  font-size: 12px;
+  text-align: center;
+}
+
+tr{
+  background-color: white;
+}
+p {
+  font-family: verdana;
+  font-size: 10px;
+}
